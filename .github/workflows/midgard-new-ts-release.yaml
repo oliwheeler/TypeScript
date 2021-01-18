@@ -1,0 +1,22 @@
+name: New TS release
+on:
+  schedule:
+  - cron: '0 15 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GIT_TOKEN }}
+        ref: midgard
+        fetch-depth: 0
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        ./scripts/midgard/update_fork.sh
+
