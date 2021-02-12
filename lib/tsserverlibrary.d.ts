@@ -2850,6 +2850,7 @@ declare namespace ts {
         incremental?: boolean;
         tsBuildInfoFile?: string;
         removeComments?: boolean;
+        resolutionPlatforms?: string[];
         rootDir?: string;
         rootDirs?: string[];
         skipLibCheck?: boolean;
