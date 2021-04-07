@@ -13,3 +13,7 @@ They will be applied when the next version of the upstream TypeScript is release
 With each new release of TypeScript, or a patch has been applied,
 a tag is created in the form `vX.X.X-midgard` which is published
 to npm [here](https://www.npmjs.com/package/@msfast/typescript-platform-resolution)
+
+## Maintenance
+
+The automated workflows for this are the [workflows with the `midgard-` prefix](.github/workflows)
